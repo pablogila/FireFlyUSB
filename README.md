@@ -1,6 +1,6 @@
 # FireFlyUSB
 
-Need to use a public computer often? Are you tired of adding and removing your accounts every day? No problem! FireFlyUSB is a set of scripts that make it extremely easy to take your Firefox profile with you on an USB, to use it on public computers without worrying about exposing your data.  
+Need to use a public computer often? Tired of adding and removing your accounts every day? No problem! FireFlyUSB is a set of scripts that make it extremely easy to take your Firefox profile with you on an USB, to use it on public computers without worrying about exposing your data.  
 
 
 ## Download
@@ -61,5 +61,7 @@ Note that **COPY.sh** does not send your files to the trash. If you find any of 
 You are always exposed on a public computer. FireFlyUSB scripts can help remove most of your traces, but know that this does not protect you from an attack over the network. Also, even deleted files can be recovered with a file recovery program like Recuva, so be careful what you do.  
 
 I am in no way an expert in computer security, so use these scripts at your own risk. If you find a flagrant security hole, please let me know.  
+
+In principle you could create your Firefox profile folder directly inside the USB, but at least in my experience it runs sloooooow. This is the reason for FireFlyUSB.
 
 These scripts are written for Linux under the GPL-3.0 License. Feel free to share, edit and adapt them; it would not be hard to translate them for Windows if you want.  
