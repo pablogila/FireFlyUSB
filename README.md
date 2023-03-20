@@ -3,6 +3,13 @@
 Need to use a public computer often? Are you tired of adding and removing your accounts every day? No problem! FireFlyUSB is a set of scripts that make it extremely easy to take your Firefox profile with you on an USB, to use it on public computers without worrying about exposing your data.  
 
 
+## Download
+
+On GitHub, click on **Code** and then **Download ZIP**.  
+Or if you prefer using **Git**, run:  
+`git clone https://github.com/pablogila/FireFlyUSB.git`
+
+
 ## Preparation
 
 The first thing is to create your Firefox Profile, with all the accounts, extensions and configurations that you want to carry around. In order to do this, go to the public computer, open a terminal and write:
