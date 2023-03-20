@@ -6,8 +6,7 @@ Need to use a public computer often? Tired of adding and removing your accounts 
 ## Download
 
 On GitHub, click on **Code** and then **Download ZIP**.  
-Or if you prefer using **Git**, run:  
-`git clone https://github.com/pablogila/FireFlyUSB.git`
+Or if you prefer using **Git**, run: `git clone https://github.com/pablogila/FireFlyUSB.git`
 
 
 ## Preparation
