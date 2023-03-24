@@ -62,9 +62,9 @@ You can now check that both your profile zip and folder are removed when you exe
 
 If you ever want to change your Firefox configuration or add new extensions or accounts, you will have to compress your folder into a zip again and overwrite the one from your USB.  
 
-Note that **COPY.sh** does not send your files to the trash. If you find any of your zip files or folders in the trash, **delete them permanently**.  
+Note that **COPY.sh** does not send your files to the trash. If you ever find any of your zip files or folders in the trash, **delete them permanently**.  
 
-You are always exposed on a public computer. FireFlyUSB scripts can help remove most of your traces, but know that this does not protect you from an attack over the network. Also, even deleted files can be recovered with a file recovery program like Recuva, so be careful what you do.  
+You are always exposed on a public computer. FireFlyUSB scripts represent a compromise between privacy and everyday comodity, but know that this does not protect you from an infected computer or an attack over the network. Also, even deleted files can be recovered with a file recovery program like Recuva, so be careful what you do.
 
 I am in no way an expert in computer security, so **use these scripts at your own risk**. If you find a flagrant security hole, please let me know.  
 
