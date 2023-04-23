@@ -1,11 +1,11 @@
 # FireFlyUSB
 
-Need to use a public computer often? Tired of adding and removing your accounts every day? No problem! FireFlyUSB is a set of scripts that make it extremely easy to take your Firefox profile with you on an USB, to use it on public computers without worrying about exposing your data.   
+Need to use a public computer often? Tired of adding and removing your accounts every day? No problem! FireFlyUSB is a set of scripts that make it extremely easy to take your Firefox profile with you on an USB, to use it on public computers (Linux or Windows) without worrying about exposing your data.   
 
 
 ## Usage
 
-Every time you want to use your Firefox Profile, connect your USB, go to your folder in the public computer, execute `COPY.sh`, and open Firefox with `FIREFOX.sh`. When you are done, execute `CLEAN.sh` to remove your data from the computer.  
+Every time you want to use your Firefox Profile, connect your USB, go to your folder in the public computer, execute `FireFly.sh`, and open Firefox with `FIREFOX.sh`. When you are done, execute `CLEAN.sh` to remove your data from the computer.  
 
 Sounds easy right? Let's see how to configure it.
 
@@ -26,43 +26,47 @@ A window will open, asking you to select a profile. Take a look on the default p
 
 `/home/USER/FOLDER/MyFirefoxProfile/`  
 
-You will have to copy later the `CLEAN.sh`, `COPY.sh` and `FIREFOX.sh` scripts to the parent folder, in this case, `/home/USER/FOLDER/`. Note that if you choose a name other than **MyFirefoxProfile**, you will need to update it within all the scripts.  
+You will have to copy later the `CLEAN.sh`, `FireFly.sh` and `FIREFOX.sh` scripts to the parent folder, in this case, `/home/USER/FOLDER/`. Note that if you choose a name other than **MyFirefoxProfile**, you will need to update it within all the scripts.  
 
 Now start customizing your Firefox. Remember to check the **Delete cookies and site data when closing Firefox** option in the **Privacy and Security** panel. You can add exceptions to this deletion if you wish. When you are done, close Firefox, compress your `MyFirefoxProfile` into a `MyFirefoxProfile.zip`, and copy this zip to your USB.  
 
 
 ## Get the scripts ready
 
-If you didn't do it before, copy the `CLEAN.sh`, `COPY.sh` and `FIREFOX.sh` scripts to the parent folder of your Firefox Profile, in this case, `/home/USER/FOLDER/`.  
+Notice that, although this guide is written for Linux, the files denoted as *_win are specific for Windows, and can be executed by installing **Git Bash** on your computer.  
 
-You will now modify the `COPY.sh` script. You need to write both paths of your zip file, so that when you execute the script, the zip from your USB will copy and extract to the public computer:  
+If you didn't do it before, copy the `CLEAN.sh`, `FireFly.sh` and `FIREFOX.sh` scripts to the parent folder of your Firefox Profile, in this case, `/home/USER/FOLDER/`.  
+
+You will now modify the `FireFly.sh` script. You need to write both paths of your zip file, so that when you execute the script, the zip from your USB will copy and extract to the public computer:  
 
 `cp /USB_PATH/MyFirefoxProfile.zip /PUBLIC_PC_PATH/MyFirefoxProfile.zip`  
 
-The `COPY.sh` script should look somewhat like this:  
+The `FireFly.sh` script should look somewhat like this:  
 
 ```shell
 #!/bin/bash
 
 cp /media/home/USB/FireFly/MyFirefoxProfile.zip /home/USER/FOLDER/MyFirefoxProfile.zip
-
 unzip MyFirefoxProfile.zip
+cp /media/home/USB/FireFly/FIREFOX.sh /home/USER/FOLDER/FIREFOX.sh
+cp /media/home/USB/FireFly/CLEAN.sh /home/USER/FOLDER/CLEAN.sh
+rm MyFirefoxProfile.zip
 ```
 
 Then make all bash scripts executable, with the following command:  
 
-`chmod u+x CLEAN.sh COPY.sh FIREFOX.sh`  
+`chmod u+x CLEAN.sh FireFly.sh FIREFOX.sh`  
 
 Finally, return Firefox to normal for the rest of the users by running `firefox -P`, select **default-release**, click **Use the selected profile at start-up without asking** and **Start Firefox**. Confirm that this is the public profile for the browser, and exit.  
 
-You can now check that both your profile zip and folder are removed when you execute `CLEAN.sh`. Congratulations! you have succesfully configured all the FireFlyUSB scripts.  
+You can now check that all files, except for `FireFly.sh`, are removed when you execute `CLEAN.sh`. Congratulations! you have succesfully configured all the FireFlyUSB scripts.  
 
 
 ## Final Considerations
 
 If you ever want to change your Firefox configuration or add new extensions or accounts, you will have to compress your folder into a zip again and overwrite the one from your USB.  
 
-Note that **COPY.sh** does not send your files to the trash. If you ever find any of your zip files or folders in the trash, **delete them permanently**.  
+Note that **CLEAN.sh** does not send your files to the trash. If you ever find any of your zip files or folders in the trash, **delete them permanently**.  
 
 You are always exposed on a public computer. FireFlyUSB scripts represent a compromise between privacy and everyday comodity, but know that this does not protect you from an infected computer or an attack over the network. Also, even deleted files can be recovered with a file recovery program like Recuva, so be careful what you do.
 

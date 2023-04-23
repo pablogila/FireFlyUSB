@@ -2,5 +2,6 @@
 
 rm -r MyFirefoxProfile
 rm MyFirefoxProfile.zip
-rm FIREFOX.sh
-rm CLEAN.sh
+rm Firefox_win.lnk
+rm CLEAN_win.sh
+
